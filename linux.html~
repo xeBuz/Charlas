@@ -136,14 +136,16 @@
 	<h1>Diseño</h1>
     </div>
     <div id="juegos" class="step" data-x="6500" data-y="6000">  
-	<h1>Juego</h1>
+	<h1>Juegos</h1>
     </div>
-
+    <div id="escritorios" class="step" data-x="6500" data-y="7000">  
+	<h1>Escritorios. </h1>
+    </div>
 
     <div id="deme" class="step slide" data-x="7000" data-y="0">  
-	<p>Quiero. Deme.</p>
+	<h1>Quiero. Deme</h1>
     </div>
-    
+    <!-- otras diapositivas: Gnome/KDE y etc; Distros; Instalaciones -->
 </div>
 
 
