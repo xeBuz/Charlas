@@ -9,7 +9,7 @@
 	<meta name="description" content="Introducción a GNU/Linux, sin tecniscismos ni evangelización">
 	<meta name="author" content="Jesús Roldán @xeBuz  - Pablo Bachi Varisco @BachiTux" />
 
-	<link href="css/impress.css" rel="stylesheet" />
+	<link href="css/impress-demo.css" rel="stylesheet" />
 	<script type="text/javascript" src="js/impress.js"></script>
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
