@@ -10,6 +10,7 @@
 	<meta name="author" content="Jesús Roldán @xeBuz  - Pablo Bachi Varisco @TheOnlyBachi" />
 
 	<link href="css/impress.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet"/>
 	<script type="text/javascript" src="js/impress.js"></script>
 
     	<link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
@@ -116,6 +117,33 @@
     </div>
     	<div id="navegadores" class="step" data-x="7500" data-y="1500">  
 	    <h1>Navegadores</h1>
+			<div id="slideshow" class="rs-slideshow">
+				<div class="slide-container">
+					<img src="img/apps/navegadores/firefox.png" alt="Firefox" title="Firefox" />
+					<span class="slide-caption">Mozilla Firefox</span>
+				</div>
+				<ol class="slides">
+						<li>
+						<a href="img/apps/navegadores/opera.png" title="Opera">Opera</a>
+					</li>
+					<li>
+						<a href="img/apps/navegadores/firefox.png" title="Firefox">Firefox</a>
+					</li>
+					<li>
+						<a href="img/apps/navegadores/chrome.png" title="Chrome">Chrome</a>
+					</li>
+					<li>
+						<a href="img/apps/navegadores/chromium.png" title="Chromium">Chromium</a>
+					</li>
+					<li>
+						<a href="img/apps/navegadores/safari.png" title="Safari">Safari</a>
+					</li>
+					<li>
+						<a href="img/apps/navegadores/konkeror.png" title="Konkeror">Konkeror</a>
+					</li>
+
+				</ol>
+			</div>
 	</div>
         <div id="chat" class="step" data-x="8500" data-y="1500">  
 	    <h1>Mensajería instantánea (chat)</h1>
@@ -161,7 +189,17 @@ if ("ontouchstart" in document.documentElement) {
 
 <script src="js/impress.js"></script>
 <script>impress().init();</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/jquery.rs.slideshow.js"></script>
+<script src="js/bootstrap.js"></script>
 
+<script>
+$('#slideshow-div').rsfSlideshow({
+    interval: 1,
+    transition: 300,
+    effect: 'slideUp'
+});
+</script>
 
 </body>
 </html>
