@@ -42,7 +42,7 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 body {
-    font-family: 'Quicksand', Verdana, sans-serif;
+    font-family: 'Inconsolata', 'Ubuntu', Verdana, sans-serif;
 	-webkit-font-smoothing: antialiased;
     line-height: 1;
 }
@@ -65,7 +65,7 @@ table {
 
 
 body {
-    font-family: 'Quicksand', Verdana, sans-serif;
+    font-family: 'Inconsolata', 'Ubuntu', Verdana, sans-serif;
     
     min-height: 740px;
 
@@ -122,17 +122,9 @@ h4 {
 	margin-left: 50px;
 }
 
-titulo {
-	font-size: 216px;
-	line-height: 32px;
-	margin-left: 50px;
-
-        text-shadow: #333 -3px 3px 4px;
-}
-
 
 small {
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 32px;
 	margin-left: 50px;
 }

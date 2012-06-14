@@ -42,7 +42,7 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 body {
-    font-family: 'Quicksand', Verdana, sans-serif;
+    font-family: 'Ubuntu', Verdana, sans-serif;
 	-webkit-font-smoothing: antialiased;
     line-height: 1;
 }
@@ -65,7 +65,7 @@ table {
 
 
 body {
-    font-family: 'Quicksand', Verdana, sans-serif;
+    font-family: 'Ubuntu', Verdana, sans-serif;
     
     min-height: 740px;
 
