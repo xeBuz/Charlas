@@ -55,14 +55,14 @@
     <div id="libre" class="step slide" data-x="4000" data-y="0"  >
         <h1>Software Libre...</h1>
 	</br>
-	<li>Establece que el software debe ser Libre, pero no confundirlo con Gratis, va más allá de eso.</li>
+	<li>Establece que el software debe ser <b class="rotating">Libre</b>, pero no confundirlo con Gratis, va más allá de eso.</li>
 	<small>(Free as a bird, not as in free beer)</small>
 	<li>Libre quiere decir que se distribuya el código fuente.</li>
  	<li>Compartir está bueno.</li>
 	<li>Usar software privativo, si les sirve, no está mal.</li>
 
 	</br>
-         <p>Podemos comparar el software libre con una receta, al compartirla, otros pueden cocinar lo mismo e incluso mejorarla, dándote crédito por lo que hiciste inicialmente. Y todos ganan, y compramos menos Pepitos y Toddys.</p>
+         <p>Podemos comparar el software libre con una receta, al compartirla, otros pueden cocinar lo mismo e incluso mejorarla, dándote crédito por lo que hiciste inicialmente. Todos ganan ... menos los que venden Pepitos y Toddys.</p>
     </div>
 
     <div id="mitos" class="step slide" data-x="5000" data-y="0">  
@@ -70,14 +70,17 @@
 	<q>
 	<ul>
 	    <li>Es difícil de usar...</li>
-            <li>No hay virus...</li>
             <li>Tenés que usar la consola...</li>
             <li>Es difícil de instalar...</li>
             <li>No hay juegos...</li>
-
+            <li>No hay virus...</li>
 	<ul>
 	</q>
     </div>
+
+  <div id="run_linux" class="step" data-x="5000" data-y="400" data-scale="0.1">  
+	<center><img src="img/comics/runlinux.png"/> </center>
+  </div>
 
     <div id="software" class="step" data-x="6500" data-y="1000">  
 	<h1>Software disponible</h1>
@@ -172,6 +175,8 @@
 				</ol>
 			</div>
     	</div>
+  
+
     <div id="ofimatica" class="step" data-x="6500" data-y="2500" data-rotate-x="-10">  
 	<h1>Ofimática</h1>
 
@@ -290,6 +295,12 @@
 			</div>
 
     </div>
+    <div id="wine" class="step" data-x="6500" data-y="7500">  
+	<center>
+	<h1>Y si no les alcanza...Wine</h1><br>
+	<img src="img/apps/download/wine.png"/>
+	</center>
+    </div>
     <div id="deme" class="step slide" data-x="8000" data-y="0">  
 	<h1>Soy viejo. Deme.</h1>
 	<q>Primero necesitamos elegir una distribución (distro) de Linux</q>
@@ -402,7 +413,11 @@
 	 <img src="img/mint/8.png"/>
     </div>
 
-    
+    <div id="instalacion_final" class="step" data-x="4700" data-y="2000" data-scale="1.7">  
+	<h1>...y instalaron Linux</h1>
+	 <img src="img/mint/mint.png"/>
+    </div>
+  
     <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
      	</div>
     </div>
@@ -425,10 +440,10 @@ if ("ontouchstart" in document.documentElement) {
 <script src="js/bootstrap.js"></script>
 
 <script>
-$('#slideshow-div').rsfSlideshow({
-    interval: 1,
-    transition: 300,
-    effect: 'slideUp'
+$('.rs-slideshow').rsfSlideshow({
+    interval: 5,
+    transition: 1200,
+    effect: 'fade'
 });
 </script>
 
