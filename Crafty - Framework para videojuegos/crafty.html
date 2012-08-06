@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CoderDeck Sample</title>
+	<meta name="viewport" content="width=1024">
+
+	<link rel="stylesheet" href="css/coderdeck-core.min.css" type="text/css">
+	<link rel="stylesheet" id='style-theme-link' href="css/coderdeck.css" type="text/css" >
+
+	<script src='js/jquery.min.js'></script>
+	<script src="js/modernizr.js"></script>
+
+</head>
+<body class="deck-container">
+
+<script type='text/coderdeck' id='coderdeck-default'>
+  <html>
+    <head>
+      <script src='js/jquery.min.js'>SCRIPTEND
+    </head>
+    <body>
+	    CODE
+    </body>
+</html>
+</script>
+
+<article class='slide slide-subhead'>
+<h1>CoderDeck</h1>
+<h2><a href='http://github.com/cykod/CoderDeck'>http://github.com/cykod/CoderDeck</a><br/>
+	create interactive live-coding presentations for the web.<br/>
+	use the arrow-keys go between slides.
+</h2>
+</article>
+
+
+
+<script src='js/coderdeck.min.js'></script>
+<script>
+	$(function() {
+		$.deck('.slide');
+	});
+</script>
+</body>
+</html>
