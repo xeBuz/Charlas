@@ -3,34 +3,136 @@
 <head>
 	<meta charset="utf-8">
 	<title>Crafty - Programación de Videojuegos en HTML5</title>
-	<meta name="viewport" content="width=1024">
+    <meta name="viewport" content="width=1024">
 
 	<link rel="stylesheet" href="css/coderdeck-core.min.css" type="text/css">
 	<link rel="stylesheet" id='style-theme-link' href="css/coderdeck.css" type="text/css" >
 
 	<script src='js/jquery.min.js'></script>
 	<script src="js/modernizr.js"></script>
+  <script src='js/crafty.js'></script>
 
 </head>
 <body class="deck-container">
+
 
 <script type='text/coderdeck' id='coderdeck-default'>
   <html>
     <head>
       <script src='js/jquery.min.js'>SCRIPTEND
+      <script src='js/crafty.js'>SCRIPTEND
     </head>
     <body>
-	    CODE
+    <script>
+      CODE
+    SCRIPTEND
     </body>
 </html>
 </script>
 
+
+
+<script type='text/coderdeck' id='crafty-template'>
+  <html>
+    <head>
+      <script src='js/jquery.min.js'>SCRIPTEND
+      <script src='js/crafty.js'>SCRIPTEND
+    </head>
+    <body>
+    <script>
+      $(document).ready(function() {
+
+        Crafty.init(640,480).canvas.init();
+        Crafty.background("black");
+
+        CODE
+      });
+    SCRIPTEND
+    </body>
+</html>
+</script>
+
+
+<script type='text/coderdeck' id='crafty-separate-template'>
+  <html>
+    <head>
+      <script src='js/jquery.min.js'>SCRIPTEND
+      <script src='js/crafty.js'>SCRIPTEND
+    </head>
+    <body>
+    <script>
+      $(document).ready(function() {
+
+        Crafty.init(640,480).canvas.init();
+        Crafty.background("black");
+
+        startGame();
+    });
+    SCRIPTEND
+
+    CODE
+
+    </body>
+</html>
+</script>
+
+
+
+
 <article class='slide slide-subhead'>
-<h1>Crafty</h1>
-<h2>Framework Open Source orientado al desarrollo de videojuegos con HTML5 y JavaScript
-</h2>
+    <h1>Crafty</h1>
+    <h2>Introducción a la programación de videojuegos.</h2>
+    <h2>Framework Open-Source orientado al desarrollo con HTML5 y JavaScript.</h2>
 </article>
 
+
+<article class='slide slide-list'>
+<h2>Bootstrapping Crafty</h2>
+<pre class='prettyprint'>
+// When the DOM has loaded
+$(document).ready(function() {
+
+  // Initialize Crafty
+  Crafty.init(640, // 640 Pixels Wide
+              480  // 480 Pixels Tall
+              );
+
+  Crafty.canvas.init(); // Create a Canvas Element 
+
+});
+</pre>
+</article>
+
+<article class='slide slide-list'>
+<h2>Putting it all together</h2>
+<p>Let's Bootstrap crafty and start our Game</p>
+<textarea class='coder-editor coder-editor-full'  data-language='javascript'>
+$(document).ready(function() {
+
+  Crafty.init(640,480);
+  Crafty.canvas.init();
+
+  var player = Crafty.e(); 
+  player.addComponent("2D, Canvas, Color")
+
+  player.color("red").attr({w:50, h:50});
+});
+</textarea>
+</article>
+
+
+<article class='slide slide-list'>
+<h2>Test</h2>
+<p>Probando como se vería completo</p>
+<textarea class='coder-editor coder-editor-full'  data-language='javascript'>
+$(document).ready(function() {
+
+  Crafty.init(500, 400, 30);
+   Crafty.canvas.init();
+
+});
+</textarea>
+</article>
 
 
 <script src='js/coderdeck.min.js'></script>
