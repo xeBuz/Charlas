@@ -297,6 +297,33 @@ $(document).ready(function() {
 </article>
 
 
+<article class='slide slide-list'>
+<h2>Un poco más interactivo</h2>
+<h4>
+<textarea class='coder-editor coder-editor-full'  data-language='javascript'>
+$(document).ready(function() {
+  Crafty.init(1000,500).canvas.init();
+  Crafty.background("black");
+
+  var cuadrado = Crafty.e("2D, Canvas, Color")
+                       .attr({y:100, x:100, w:25, h:25}) 
+                       .color("FCDF00");
+
+  // Este componente me permite manejar a través del teclado
+  // Usa las flechas y el WASD por igual 
+  cuadrado.addComponent("Fourway").fourway(3);
+
+  //cuadrado.addComponent("Multiway").multiway(4,{ 
+  //        UP_ARROW: -90, DOWN_ARROW: 90, 
+  //        RIGHT_ARROW: 0, LEFT_ARROW: 180});
+});
+</textarea>
+</h4>
+</article>
+
+
+
+
 
 
 <script src='js/coderdeck.min.js'></script>
