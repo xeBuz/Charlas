@@ -250,6 +250,7 @@ $(document).ready(function() {
 
 <article class='slide slide-list'>
 <h2>Trabajando con elementos</h2>
+<h4>
 <textarea class='coder-editor coder-editor-full'  data-language='javascript'>
 $(document).ready(function() {
 
@@ -258,30 +259,41 @@ $(document).ready(function() {
   Crafty.canvas.init();
 
   // Creamos una variable (elemento) con 3 componentes
-  // 2D, Canvas
-  // Color le da ... color
+  // "Canvas" me permite dibujar en la pantalla y "2D" establecer la ubicación
+  // "Color" le da ... color
   var cuadrado = Crafty.e("2D, Canvas, Color"); 
   cuadrado.attr({w:50, h:50});
 });
 </textarea>
+</h4>
 </article>
 
 
 <article class='slide slide-list'>
 <h2>Se puede escribir de varias formas</h2>
+<h4>
 <textarea class='coder-editor coder-editor-full'  data-language='javascript'>
 $(document).ready(function() {
 
   //En una sola línea podemos poner varias cosas, simplifica la lectura
   Crafty.init(640,640).canvas.init();
 
+  //En varias líneas, con identado
   var cuadrado = Crafty.e("2D, Canvas, Color")
                        .attr({y:20, x:20, w:50, h:50}) 
                        .color("blue")
 
-  cuadrado.addComponent("Draggable").dragDirection()
+  //Se pueden agregar componentes en cualquier momento
+  cuadrado.addComponent("Draggable").dragDirection();
+
+  //También se pueden quitar componentes
+  //cuadrado.removeComponent("Draggable");
+
+  //Y modificar las propiedades
+  //cuadrado.dragDirection({x:1, y:0})
 });
 </textarea>
+</h4>
 </article>
 
 
