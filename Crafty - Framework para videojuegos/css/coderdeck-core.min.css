@@ -84,7 +84,7 @@ html {
   vertical-align: middle;
 }
 .deck-container select, .deck-container input, .deck-container textarea, .deck-container button {
-  font: 99% sans-serif;
+  font: 120% sans-serif;
 }
 .deck-container pre, .deck-container code, .deck-container kbd, .deck-container samp {
   font-family: monospace, sans-serif;

@@ -144,13 +144,10 @@
   <h3>No requiere instalación.</h3>
 </li>
 <li class="slide">
-  <h3>Tiene una llegada fácil al casual gamer.  </h3>
+  <h3>Tiene una llegada fácil al casual gamer.</h3>
 </li>
 <li class="slide">
-  <h3>Hoy por hoy, no requiere demasiados conocimientos previos.</h3>
-</li>
-<li class="slide">
-  <img src="img/tails.gif" alt="Tail"/>
+  <img src="img/tails.gif" alt="Tails"/>
 </li>
 </ul>
 </article>
@@ -169,82 +166,125 @@
 <h2>Y bien...¿Por qué HTML5? II</h2>
 <ul>
 <li class="slide">
-  <h3>Todos tiene un navegador.</h3>
+  <h3>Es (o debería serlo) un estándar para todos los navegadores y sistemas operativos.</h3>
 </li>
 <li class="slide">
-  <h3>No requiere instalación.</h3>
-</li>
-<li class="slide">
-  <h3>Tiene una llegada fácil al casual gamer.  </h3>
+  <h3>No requiere plugins ni sandeces de ese tipo.</h3>
 </li>
 <li class="slide">
   <h3>Hoy por hoy, no requiere demasiados conocimientos previos.</h3>
 </li>
 <li class="slide">
-  <img src="img/guybrush.jpg" alt="Day of the tentacle"/>
+  <img src="img/earthwormjim.jpg" alt="Earth Worm Jim"/>
 </li>
 </ul>
 </article>
 
 <article class='slide slide-list'>
-<h2>Y bien...¿Por qué HTML5?</h2>
-<ol>
-<li class="slide"><h3>¡NO ES FLASH!</h3></li>
-<li class="slide"><h3>GO TO 1</h3>
-<img align="right" src="img/guybrush.png" alt="Monkey Island"/>
+<h2>Usemos un framework: Crafty</h2>
+<ul>
+  <li class="slide">
+  <h3>Es sencillo de aprender, la documentación "está bien".</h3>
 </li>
-</ol>
+<li class="slide">
+  <h3>Es OpenSource y funciona en todos los navegadores <i>modernos</i>.</h3>
+</li>
+<li class="slide">
+  <h3>Permite utilizar Canvas o DOM.</h3>
+</li>
+<li class="slide">
+  <h3>Soporta Sprites.</h3>
+</li>
+<li class="slide">
+  <h3>Es muy liviano.</h3>
+</li>
+<li class="slide">
+  <h3>Utiliza un "Entity-Component System".</h3>
+</li>
+<li class="slide">
+  <h3>Gestiona las colisiones.</h3>
+</li>
+<li class="slide">
+  <h3>Maneja eventos.</h3>
+</li>
+</ul>
+</article>
+
+<article class='slide slide-list'>
+<h2>El esqueleto básico del HTML</h2>
+<h4>
+<pre class='prettyprint'>
+&lt;!DOCTYPE html&gt; 
+&lt;html&gt; 
+    &lt;head&gt; 
+        &lt;title&gt;Final Fantasy XXVII&lt;/title&gt;
+        &lt;script src="crafty.js" type="text/javascript"&gt;&lt;/script&gt; 
+        &lt;script src="main.js" type="text/javascript"&gt;&lt;/script&gt; 
+    &lt;/head&gt; 
+    &lt;body&gt; 
+    &lt;/body&gt; 
+&lt;/html&gt;
+</pre>
+</h4> 
 </article>
 
 
-
 <article class='slide slide-list'>
-<h2>Bootstrapping Crafty</h2>
+<h2>El esqueleto básico de Crafty</h2>
+<h4> 
 <pre class='prettyprint'>
-// When the DOM has loaded
+// Cuando carga ejecuta todo esto
 $(document).ready(function() {
 
-  // Initialize Crafty
-  Crafty.init(640, // 640 Pixels Wide
-              480  // 480 Pixels Tall
-              );
+  // Inicializa el espacio donde trabaja Crafty
+  // Le damos el largo y alto
+  Crafty.init(640, 480);
 
-  Crafty.canvas.init(); // Create a Canvas Element 
+  // Inicializamos el Canvas
+  Crafty.canvas.init();  
 
 });
 </pre>
+</h4> 
 </article>
 
 <article class='slide slide-list'>
-<h2>Putting it all together</h2>
-<p>Let's Bootstrap crafty and start our Game</p>
+<h2>Trabajando con elementos</h2>
 <textarea class='coder-editor coder-editor-full'  data-language='javascript'>
 $(document).ready(function() {
 
+  // De nuevo, definimos el canvas en donde trabajar
   Crafty.init(640,480);
   Crafty.canvas.init();
 
-  var player = Crafty.e(); 
-  player.addComponent("2D, Canvas, Color")
-
-  player.color("red").attr({w:50, h:50});
+  // Creamos una variable (elemento) con 3 componentes
+  // 2D, Canvas
+  // Color le da ... color
+  var cuadrado = Crafty.e("2D, Canvas, Color"); 
+  cuadrado.attr({w:50, h:50});
 });
 </textarea>
 </article>
 
 
 <article class='slide slide-list'>
-<h2>Test</h2>
-<p>Probando como se vería completo</p>
+<h2>Se puede escribir de varias formas</h2>
 <textarea class='coder-editor coder-editor-full'  data-language='javascript'>
 $(document).ready(function() {
 
-  Crafty.init(500, 400, 30);
-   Crafty.canvas.init();
+  //En una sola línea podemos poner varias cosas, simplifica la lectura
+  Crafty.init(640,640).canvas.init();
 
+  var cuadrado = Crafty.e("2D, Canvas, Color")
+                       .attr({y:20, x:20, w:50, h:50}) 
+                       .color("blue")
+
+  cuadrado.addComponent("Draggable").dragDirection()
 });
 </textarea>
 </article>
+
+
 
 
 <script src='js/coderdeck.min.js'></script>
