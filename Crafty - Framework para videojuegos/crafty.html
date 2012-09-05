@@ -321,7 +321,26 @@ $(document).ready(function() {
 </h4>
 </article>
 
+<article class='slide slide-list'>
+<h2>Colisiones y un poco de física</h2>
+<h4>
+<textarea class='coder-editor coder-editor-full'  data-language='javascript'>
+$(document).ready(function() {
+  Crafty.init(1000,500).canvas.init();
+  
+  var suelo = Crafty.e("2D, Canvas, Color, Collision, Suelo")
+                     .attr({y:400, x:0, w:600, h:25}) 
+                     .color("black");
 
+  var cuadrado = Crafty.e("2D, Canvas, Color, Collision, Gravity")
+                       .attr({y:0, x:100, w:25, h:25}) 
+                       .color("red")
+                       .gravity().gravity("Suelo").gravityConst(0.1);
+ 
+});
+</textarea>
+</h4>
+</article>
 
 
 
