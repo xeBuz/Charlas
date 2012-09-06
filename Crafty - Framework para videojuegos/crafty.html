@@ -473,7 +473,7 @@ $(document).ready(function() {
                  y: Math.floor(Math.random() * WIDTH),
                  w: this.size,
                  h: this.size})    
-      this.requires("DOM, Collision, Solid, Color, MoveTo").color("Red");
+      this.requires("DOM, Collision, Solid, Color").color("Red");
       
       // Con esto hacemos referencia al player
       var player = Crafty("Player");
@@ -545,16 +545,39 @@ $(document).ready(function() {
     }
   });
 
+  // Crea el Player
   var player = Crafty.e("2D, Player");
-  createZombies();
-  
 
-  
+  // Llamamos a la función que genera los enemigos
+  createZombies(); 
   
 });
 </textarea>
 </h4>
 </article>
+
+
+<article class='slide slide-list'>
+<h2>Algunos detalles más</h2>
+<ul>
+<li class="slide">
+  <h3>En lugar de codificar todo de cero, puede usar CraftyBoilerplate.</h3>
+</li>
+<li class="slide">
+  <h3>Se pueden usar componentes de terceros, desde craftycomponents.com/</h3>
+</li>
+<li class="slide">
+  <h3>Ante la duda, miren el código fuente..</h3>
+</li>
+<li class="slide">
+  <h3>Si algo no les anda, es opensource, no puteen, arreglenlo.</h3>
+</li>
+<li class="slide">
+  <img src="img/kirby.jpg" alt="Kirby"/>
+</li>
+</ul>
+</article>
+
 
 
 <article class='slide slide-list'>
