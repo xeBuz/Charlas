@@ -307,7 +307,7 @@ $(document).ready(function() {
 
   var cuadrado = Crafty.e("2D, Canvas, Color")
                        .attr({y:100, x:100, w:25, h:25}) 
-                       .color("FCDF00");
+                       .color("#FCDF00");
 
   // Este componente me permite manejar a través del teclado
   // Usa las flechas y el WASD por igual 
@@ -341,6 +341,116 @@ $(document).ready(function() {
 </textarea>
 </h4>
 </article>
+
+
+<article class='slide slide-list'>
+<h2>Sprites y Scenes</h2>
+<h4>
+<textarea class='coder-editor coder-editor-full'  data-language='javascript'>
+$(document).ready(function() {
+
+  Crafty.scene("Cargar", function() {
+
+    // Load our assets
+    Crafty.load(["images/dungeon.png","images/characters.png"], function() {
+      // Put in a fake timeout so we can see this in action
+      // DONT do this in a real game please
+      setTimeout(function() { 
+         Crafty.scene("main"); // Play the main scene
+      }, 2000);
+    });
+
+    // White background and some ugle text
+    Crafty.background("#FFF");
+    Crafty.e("2D, DOM, Text").attr({w: 640, h: 20, x: 0, y: 120})
+    .text("Loading")
+    .css({"text-align": "center"});
+  });
+ 
+  Crafty.scene("Juego",function() {
+    alert("Awesome Main Scene Playing");
+  });
+
+  Crafty.scene("Cargar");
+ 
+});
+</textarea>
+</h4>
+</article>
+
+
+
+<article class='slide slide-list'>
+<h2>Creación de Componentes</h2>
+<h4>
+<textarea class='coder-editor coder-editor-full'  data-language='javascript'>
+$(document).ready(function() {
+
+  Crafty.init(1000,500).canvas.init();
+
+  //Creamos el componente Player
+  Crafty.c("Player",{
+    init: function(){
+      this.attr({x: 100, 
+                 y: 100,
+                 w: 25,
+                 h: 25})    
+      this.requires("Canvas, Collision, Solid, Color").color("black");
+    }
+  });
+  
+  // "Instanciamos" a Player
+  var player = Crafty.e("2D, Player");
+});
+</textarea>
+</h4>
+</article>
+
+
+<article class='slide slide-list'>
+<h2>Completemos un poco el Player</h2>
+<h4>
+<textarea class='coder-editor coder-editor-full'  data-language='javascript'>
+$(document).ready(function() {
+  var WIDTH = 1000
+  var HEIGHT = 500
+
+  Crafty.init(WIDTH, HEIGHT, 30);
+
+  Crafty.c("Player",{
+    size : 20,
+    posX : (WIDTH / 2),
+    posY : (HEIGHT / 2),
+
+    init: function(){
+      // Esto no tiene nada nuevo
+      this.attr({x: this.posX, 
+                 y: this.posY,
+                 w: this.size,
+                 h: this.size})  
+      this.requires("DOM, Collision, Solid, Color").color("black");
+      this.requires("Multiway").multiway({x:1.5,y:1.5}, 
+                            {UP_ARROW: -90, DOWN_ARROW: 90, RIGHT_ARROW: 0, LEFT_ARROW: 180, 
+                             W: -90, S: 90, D: 0, A: 180});
+      
+      // Podemos trabajar con CSS
+      this.css("-webkit-border-radius", "5px");
+      this.css("-moz-border-radius", "5px");
+      this.css("border-radius", "5px"); 
+      this.css("border-style", "solid");  
+      this.css("border-width", "1px");  
+      this.css("border-color", "000000"); 
+
+    }
+  });
+
+  var player = Crafty.e("2D, Player");
+
+});
+</textarea>
+</h4>
+</article>
+
 
 
 
