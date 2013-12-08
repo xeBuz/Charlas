@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript para diseñadores</title>
+
+	<meta name="viewport" content="width=1024">
+
+	<link rel="stylesheet" href="css/coderdeck-core.min.css" type="text/css">
+	<link rel="stylesheet" id='style-theme-link' href="css/coderdeck.css" type="text/css" >
+
+	<script src='js/jquery.min.js'></script>
+	<script src="js/modernizr.js"></script>
+
+</head>
+<body class="deck-container">
+
+	<!-- template with jQuery-->
+	<script type='text/coderdeck' id='coderdeck-default'>
+	  <html>
+	    <head>
+	      <script src='dist/jquery.min.js'>SCRIPTEND
+	    </head>
+	    <body>
+		    CODE
+	    </body>
+	</html>
+	</script>
+
+
+
+
+<article class='slide slide-subhead'>
+    <h1>Javascript para diseñadores</h1>
+    <br>    
+    <h2>Programación para gente que ve más de 256 colores.</h2>
+</article>
+
+<article class="slide slide-subhead">
+	<h3>Introducción a la programación</h3>
+	<img src="img/introd.gif" alt="Introducción - Hackers">
+</article>
+
+
+<article class="slide slide-list">
+	<h2>Title</h2>
+</article>
+
+<article class="slide slide-list">
+	<h2>Lenguajes de programación</h2>
+	<img src="img/lenguajes.png" alt="Difernetes Lenguajes Web">
+</article>
+
+
+<article class="slide slide-list">
+	<h2>Compilado e Interpretado</h2>
+	<h3>Los lenguajes compilados requieren de un software (compilador) que convierta nuestro código fuente a un archivo binario que se ejecuta</h3>
+	<br><br>
+	<h3>Los lenguajes interpretados requieren un intérprete que convierta este codigo...MMMMMMMMM</h3>
+</article>
+
+<article class="slide slide-list">
+	<h2>Programación funcional</h2>
+	<h3>Los procesos funcionan como una caja negra, en donde tienen un input que le provée datos y devuelven un output.</h3>
+	<img src="img/funcional.png" alt="Programacion Funcional">
+	<h4 style="text-align: center">Para una misma función, con los mismos inputs, debería devolver el mismo output.</h4>
+</article>
+
+<article class="slide slide-list">
+	<h1>Javascript</h1>
+</article>
+
+<article class="slide slide-list">
+	<h2>Javascript</h2>
+	<h3>
+		<ul>
+			<li>Nació con Nestscape.</li>
+			<li>Es un leguaje interpretado.</li>
+			<li>Es un lenguaje orientado a objetos.</li>
+			<li>Es relativamente sencillo de aprender.</li>
+			<li>Suele correr del lado del cliente (web browser)</li>
+			<li>No tiene nada que ver con Java.</li>
+		</ul>
+	</h3>
+</article>
+
+<article class="slide slide-list">
+	<h2>¿Cómo ejecutarlo?</h2>
+	<h3>Existen dos formas de correr código desde un sitio web, agregando el tag "script" o llamando a un archivo .js externo</h3>
+	<br><br>
+	<pre class="prettyprint">
+		&lt;script type="text/javascript"&gt; 
+		  // Esto se ejecuta
+		  console.log("Vini, Vidi, Vinci");
+		&lt;/script&gt;
+		
+		&lt;!-- Esto ejecuta lo que tiene el archivo externo --&gt;
+		&lt;script src='js/awesome-script.js'&gt;&lt;/script&gt;	
+	</pre>
+	<h4>Siempre se aconseja la segunda forma, sino el código es difícil de mantener.</h4>
+	
+</article>
+
+<article class="slide slide-list">
+	<h2>Hola mundo</h2>
+	<textarea class="coder-editor">
+
+<!-- Imaginen que ya existe toda la estructura -->
+<!-- por defecto de un archivo HTML cualquiera -->
+<script>
+   alert("Miren todos, soy Gandalf");
+   document.write("<h1>Hola Tierra Media.<h1>");
+
+   console.log("...a Gollum no le gusta la luz...")
+</script>
+
+	</textarea>
+</article>
+
+<article class="slide slide-list">
+	<h2>Comentarios</h2>
+	<textarea class="coder-editor">
+<script>
+// Este es un comentario de una sola línea
+// y ese es otro
+
+
+
+/* Y este es uno multilineas
+wow
+so scripting
+comments
+cool
+more lines
+*/
+</script>
+	</textarea>
+	<h4>Si no comentan su código, el niñito Dios se pone muy triste... y mata un gatito.</h4>
+	
+</article>
+
+<article class="slide slide-list">
+	
+</article>
+
+<article class="slide slide-list">
+	
+</article>
+
+<script src='js/coderdeck.min.js'></script>
+<script>
+	$(function() {
+		$.deck('.slide');
+	});
+</script>
+</body>
+</html>
