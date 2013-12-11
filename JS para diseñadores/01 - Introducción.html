@@ -43,10 +43,6 @@
 
 
 <article class="slide slide-list">
-	<h2>Title</h2>
-</article>
-
-<article class="slide slide-list">
 	<h2>Lenguajes de programación</h2>
 	<img src="img/lenguajes.png" alt="Difernetes Lenguajes Web">
 </article>
@@ -56,7 +52,7 @@
 	<h2>Compilado e Interpretado</h2>
 	<h3>Los lenguajes compilados requieren de un software (compilador) que convierta nuestro código fuente a un archivo binario que se ejecuta</h3>
 	<br><br>
-	<h3>Los lenguajes interpretados requieren un intérprete que convierta este codigo...MMMMMMMMM</h3>
+	<h3>Los lenguajes interpretados utiliza un intérprete (DAH), pero que no requiere una compilación previa para correr la aplicación.</h3>
 </article>
 
 <article class="slide slide-list">
@@ -139,6 +135,7 @@ more lines
 	
 </article>
 
+
 <article class="slide slide-list">
 	<h2>Variables</h2>
 	<h3>Imaginen las variables como una caja en donde se pueden guardar cosas. Puede ser texto, un número o algún dato mas complejo.</h3>
@@ -152,8 +149,12 @@ more lines
 	</h4>	
 	<textarea class="coder-editor">
 <script>		
-  var nombre = "Luke";
-  var numero = 42;
+  var nombre; 
+  nombre = "Luke";
+
+  var numero;
+  numero = 42;
+
   var otro_numero = 3.141592;
 
   document.write(numero + otro_numero);
@@ -162,7 +163,71 @@ more lines
 </article>
 
 <article class="slide slide-list">
-	
+	<h2>Variables II</h2>
+
+		<h3>
+		<ul>
+			<li>Traten de usar nombres descriptivos, mejor aún, traten de tener una notación definida.</li>
+			<li>Javascript es Case-Sensitive.</li>
+			<li>Eviten ir cambiando el tipo de dato de las variables.</li>	
+		</ul>
+		</h3> 			
+
+	<textarea class="coder-editor">
+<script>		
+  // Malos ejemplos
+  var var1, Var1, var2, var3;
+  var var4 = "4", var5 = "cinco";
+  var6 = true;
+  var4 = false;
+
+</script>		
+	</textarea>
+
+		
+	</textarea>
+</article>
+
+<article class="slide slide-list">
+	<h2>Tipos de Datos</h2>
+	<h3>Estos son los tipos de datos que pueden almacenar las variables</h3>
+	<h4>
+		<ul>
+			<li>Strings</li>
+			<li>Números</li>
+				<ul>
+					<li>Enteros</li>
+					<li>Decimales</li>
+					<li>Negativos</li>
+				</ul>
+			<li>Booleanos</li>
+				<ul>
+					<li>true</li>
+					<li>false</li>
+				</ul>
+			<li>Undefined</li>
+			<li>Null</li>
+			<li>Objetos</li>
+			<li>Arrays</li>
+		</ul>
+	</h4>	
+</article>
+
+<article class="slide slide-list">
+	<h2>String</h2>
+	<h3>El valor del string se define entre comillas dobles o simples.</h3>
+
+	<textarea class="coder-editor">
+<script>		
+	var text = "One Ring to rule them all"
+	document.write(text);
+	document.write("text");
+
+	text = "I'm disabled!";
+	var a = "4", b = "5", c = '6', d = 7;
+
+</script>		
+	</textarea>
 </article>
 
 <script src='js/coderdeck.min.js'></script>
