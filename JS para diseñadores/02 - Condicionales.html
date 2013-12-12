@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript para diseñadores</title>
+
+	<meta name="viewport" content="width=1024">
+
+	<link rel="stylesheet" href="css/coderdeck-core.min.css" type="text/css">
+	<link rel="stylesheet" id='style-theme-link' href="css/coderdeck.css" type="text/css" >
+
+	<script src='js/jquery.min.js'></script>
+	<script src="js/modernizr.js"></script>
+
+</head>
+<body class="deck-container">
+
+	<!-- template with jQuery-->
+	<script type='text/coderdeck' id='coderdeck-default'>
+	  <html>
+	    <head>
+	      <script src='dist/jquery.min.js'>SCRIPTEND
+	    </head>
+	    <body>
+	    <script>
+		    CODE
+		SCRIPTEND
+	    </body>
+	</html>
+	</script>
+
+
+
+
+<article class='slide slide-subhead'>
+    <h1>Javascript para diseñadores</h1>
+    <br>    
+    <h2>Programación para gente que ve más de 256 colores.</h2>
+</article>
+
+<article class="slide slide-list">
+	<h1>Condicional</h1>
+</article>
+
+<article class="slide slide-list">
+	<h2>Operadores aritméticos</h2>
+<textarea class='coder-editor'  data-language='javascript'>
+var a = 10;
+var b = 5;
+
+document.writeln(a + b); // Suma
+document.writeln(a - b); // Resta
+document.writeln(a * b); // Multiplicación
+document.writeln(a / b); // Division
+
+/*
+var c;
+c = 10;
+alert(c);
+c = c + 40;
+alert(c);
+c += 30;
+alert(c);
+c++; // c = c + 1 -> c+=1
+alert(c);
+c--;
+alert(c);
+*/
+</textarea>
+
+</article>
+
+<article class="slide slide-list">
+	<h2>Condicional: if - else</h2>
+<textarea class='coder-editor coder-editor-full'  data-language='javascript'>
+   // La estructura básica del if es la siguiente
+   if ( condicion  ) {
+      // Hacer tal cosa
+   } 
+
+   // También pueden agregarle un else, aunque es opcional
+   if ( condicion ) {
+	  // Si se cumple la condición hace esto.
+   } else {
+	  // Sino hace eso otro.	
+   }
+</textarea>
+</article>
+
+<article class="slide slide-list">
+	<h2>Condición</h2>
+	<h3>La condición, que siempre va entre paréntesis, tiene que devolver true o false.</h3>
+<textarea class='coder-editor coder-editor-full'  data-language='javascript'>
+   var a = 10, b = 5, c = "10", d = true;
+   
+   if ( a == b  ) {   }  		// false
+   
+   if ( a < b  ) {   }  		// false
+
+   if ( a != b  ) {   }  		// true
+   
+   if ( a >= b ) {   }  		// true
+
+   if ( (a - b + 5) == c ) {   } 	// true
+
+   if ( a = b ) {   }       		// true*
+
+   if ( a == c ) {   }       		// true
+
+   if ( a === c ) {   }          	// false
+   
+   if ( d ) {   } 			// true
+
+   if ( a ) {   } 			// true
+</textarea>
+</article>
+
+<article class="slide slide-list">
+	<h2>Condicione múltiples</h2>
+	<h3>Se pueden crear validaciones mas extensas, con varias condiciones</h3>
+	<ul>
+		<li>&amp;&amp; - Significa Y / AND, devuelve true en caso de que AMBAS condiciones sean verdaderas</li>
+		<li>|| - Significa O / OR, devuelve true en caso de que AL MENOS UNA condición sea verdaderas</li>
+	</ul>
+<textarea class='coder-editor coder-editor-full'  data-language='javascript'>
+   var a = 10, b = 5, c = "10", d = true;
+   
+   if ( a == 10 &&  b > 1) {   }   
+
+   if ( a == 10 || b > 10) {   }   
+
+   if ( a < 10 || b > 10) {   }
+
+   if ( a == 10 && b == 5 && c == 5) {   }         
+
+   if ( a >= 10 || d == false) {   }   
+</textarea>
+</article>
+
+<script src='js/coderdeck.min.js'></script>
+<script>
+	$(function() {
+		$.deck('.slide');
+	});
+</script>
+</body>
+</html>
