@@ -169,3 +169,10 @@
 .csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-child-current .deck-next, .csstransitions.csstransforms .deck-container:not(.deck-menu) > .deck-child-current .deck-after {
   visibility: hidden;
 }
+
+
+.two-columns {
+  -moz-column-count:2; /* Firefox */
+  -webkit-column-count:2; /* Safari and Chrome */
+  column-count:2;
+}
