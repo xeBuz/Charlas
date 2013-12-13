@@ -272,14 +272,56 @@ more lines
 	var text = "One Ring to rule them all"
 	document.write(text);
 	document.write("text");
+	console.log(text.length)
 
 	text = "I'm disabled!";
+	console.log(text.length)
+	console.log(text.toUpperCase())
+	
+
 	var a = "4", b = "5", c = '6', d = 7;
 
 </script>		
 	</textarea>
 </article>
 
+<article class="slide slide-list">
+	<h2>Interacción</h2>
+	<textarea class="coder-editor coder-editor-full">
+<script>		
+	var name;
+	var age;
+
+ 	name = prompt("¡Hola! Por favor, ingresá tu nombre","Bilbo Bolsón");
+ 	age = parseInt(prompt("Ahora ingresá tu edad"));
+
+ 	document.write("<h1>Hola " + name + "... veo que tenés " +  age + " años</h1>")
+</script>		
+	</textarea>
+</article>
+
+
+
+<article class="slide slide-list">
+	<h2>Obtener elementos</h2>
+	<textarea class="coder-editor coder-editor-full">
+
+<input type="text" id="name">		
+<input type="number" id="age">
+
+<input id="button" type="button" value="OK"/>
+
+<script>		
+	document.getElementById("button").onclick = function () { 
+		var name = document.getElementById('name').value;
+		var age = document.getElementById('age').value;
+ 	
+ 		document.write("<h1>Hola " + name + "... veo que tenés " +  age + " años</h1>")
+	};
+
+</script>		
+	</textarea>
+</article>
 
 <script src='js/coderdeck.min.js'></script>
 <script>
